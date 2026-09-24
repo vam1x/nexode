@@ -1,32 +1,50 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { navigationLinks } from '../data/projects';
+import { Link, useLocation } from 'react-router-dom';
 import RollingText from './RollingText';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const links = [
+    { label: "HOME", href: "/" },
+    { label: "WORKS", href: "/works" },
+    { label: "STUDIO", href: "/studio" },
+    { label: "BLOGS", href: "/blogs" },
+    { label: "CONTACT", href: "/contact" }
+  ];
+
+  const isLinkActive = (href) => {
+    if (href === "/works" && (location.pathname === "/" || location.pathname === "/works")) {
+      return true;
+    }
+    return location.pathname === href;
+  };
 
   return (
     <header className="site-header">
       <div className="header-inner container">
         {/* Brand Logo */}
-        <a href="/" className="logo-link" aria-label="Boldcraft Home">
+        <Link to="/" className="logo-link" aria-label="Boldcraft Home">
           <span className="logo-text">BOLDCRAFT</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <nav className="desktop-nav" aria-label="Main Navigation">
           <div className="nav-links">
-            {navigationLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className={`nav-item ${link.active ? 'is-active' : ''}`}
-                aria-current={link.active ? 'page' : undefined}
-              >
-                <RollingText text={link.label} />
-              </a>
-            ))}
+            {links.map((link) => {
+              const active = isLinkActive(link.href);
+              return (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className={`nav-item ${active ? 'is-active' : ''}`}
+                  aria-current={active ? 'page' : undefined}
+                >
+                  <RollingText text={link.label} />
+                </Link>
+              );
+            })}
           </div>
         </nav>
 
@@ -45,33 +63,25 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            className="mobile-dropdown"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <nav className="mobile-nav-links container" aria-label="Mobile Navigation">
-              {navigationLinks.map((link, idx) => (
-                <motion.a
+      {isMobileMenuOpen && (
+        <div className="mobile-dropdown">
+          <nav className="mobile-nav-links container" aria-label="Mobile Navigation">
+            {links.map((link) => {
+              const active = isLinkActive(link.href);
+              return (
+                <Link
                   key={link.label}
-                  href={link.href}
-                  className={`mobile-nav-item ${link.active ? 'is-active' : ''}`}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.05 * idx, duration: 0.3 }}
+                  to={link.href}
+                  className={`mobile-nav-item ${active ? 'is-active' : ''}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
-                </motion.a>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+      )}
 
       <style>{`
         .site-header {
@@ -127,7 +137,7 @@ export default function Navbar() {
         }
 
         .nav-item.is-active {
-          font-weight: 500;
+          font-weight: 600;
         }
 
         .mobile-menu-btn {
@@ -144,6 +154,12 @@ export default function Navbar() {
           overflow: hidden;
           background-color: var(--color-bg);
           border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+          animation: slideDown 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes slideDown {
+          from { opacity: 0; transform: translateY(-8px); }
+          to { opacity: 1; transform: translateY(0); }
         }
 
         .mobile-nav-links {
@@ -166,6 +182,7 @@ export default function Navbar() {
         .mobile-nav-item.is-active {
           opacity: 1;
           color: var(--color-text);
+          font-weight: 700;
         }
 
         @media (max-width: 809px) {

@@ -1,10 +1,39 @@
 import React, { useState } from 'react';
-import { footerColumns } from '../data/projects';
+import { Link, useLocation } from 'react-router-dom';
 import RollingText from './RollingText';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const location = useLocation();
+
+  const pagesLinks = [
+    { label: "Home", href: "/" },
+    { label: "Works", href: "/works" },
+    { label: "Studio", href: "/studio" },
+    { label: "Blogs", href: "/blogs" },
+    { label: "Contact", href: "/contact" }
+  ];
+
+  const legalLinks = [
+    { label: "404", href: "/404" },
+    { label: "Privacy Policy", href: "/legal/privacy-policy" },
+    { label: "Terms of Service", href: "/legal/terms-of-service" }
+  ];
+
+  const socialLinks = [
+    { label: "Twitter/X", href: "https://x.com/Faris_rzk" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/" },
+    { label: "Instagram", href: "https://www.instagram.com" },
+    { label: "Facebook", href: "https://www.facebook.com" }
+  ];
+
+  const isLinkActive = (href) => {
+    if (href === "/works" && (location.pathname === "/" || location.pathname === "/works")) {
+      return true;
+    }
+    return location.pathname === href;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,9 +51,9 @@ export default function Footer() {
         <div className="footer-upper">
           {/* Left Column: Brand, Tagline, Newsletter */}
           <div className="footer-brand-col">
-            <a href="/" className="footer-logo">
+            <Link to="/" className="footer-logo">
               <h4>BOLDCRAFT</h4>
-            </a>
+            </Link>
             <p className="footer-tagline">
               Design That Builds Brands &amp; Digital Experiences
             </p>
@@ -57,16 +86,19 @@ export default function Footer() {
             <div className="footer-nav-col">
               <span className="col-label">Pages</span>
               <ul className="col-links">
-                {footerColumns.pages.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className={`footer-link ${link.active ? 'is-active' : ''}`}
-                    >
-                      <RollingText text={link.label} />
-                    </a>
-                  </li>
-                ))}
+                {pagesLinks.map((link) => {
+                  const active = isLinkActive(link.href);
+                  return (
+                    <li key={link.label}>
+                      <Link
+                        to={link.href}
+                        className={`footer-link ${active ? 'is-active' : ''}`}
+                      >
+                        <RollingText text={link.label} />
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -74,11 +106,11 @@ export default function Footer() {
             <div className="footer-nav-col">
               <span className="col-label">Legal</span>
               <ul className="col-links">
-                {footerColumns.legal.map((link) => (
+                {legalLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="footer-link">
+                    <Link to={link.href} className="footer-link">
                       <RollingText text={link.label} />
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -88,7 +120,7 @@ export default function Footer() {
             <div className="footer-nav-col">
               <span className="col-label">Socials</span>
               <ul className="col-links">
-                {footerColumns.socials.map((link) => (
+                {socialLinks.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
@@ -269,6 +301,11 @@ export default function Footer() {
           color: var(--color-dark-text);
           display: inline-block;
           line-height: 1.2;
+        }
+
+        .footer-link.is-active {
+          color: #ffffff;
+          font-weight: 500;
         }
 
         .footer-bottom {
