@@ -4,7 +4,7 @@ import BlogsGrid from '../components/BlogsGrid';
 
 export default function BlogsPage() {
   useEffect(() => {
-    document.title = "Blogs — Bold Craft";
+    document.title = "Blogs — NEXODE";
     window.scrollTo(0, 0);
   }, []);
 

@@ -21,18 +21,11 @@ export default function Footer() {
     { label: "Terms of Service", href: "/legal/terms-of-service" }
   ];
 
-  const socialLinks = [
-    { label: "Twitter/X", href: "https://x.com/Faris_rzk" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/" },
-    { label: "Instagram", href: "https://www.instagram.com" },
-    { label: "Facebook", href: "https://www.facebook.com" }
-  ];
-
   const isLinkActive = (href) => {
-    if (href === "/works" && (location.pathname === "/" || location.pathname === "/works")) {
-      return true;
+    if (href === "/") {
+      return location.pathname === "/";
     }
-    return location.pathname === href;
+    return location.pathname.startsWith(href);
   };
 
   const handleSubmit = (e) => {
@@ -52,10 +45,10 @@ export default function Footer() {
           {/* Left Column: Brand, Tagline, Newsletter */}
           <div className="footer-brand-col">
             <Link to="/" className="footer-logo">
-              <h4>BOLDCRAFT</h4>
+              <h4>NEXODE</h4>
             </Link>
             <p className="footer-tagline">
-              Design That Builds Brands &amp; Digital Experiences
+              Next-Gen Digital Products &amp; Bespoke Web Experiences
             </p>
 
             <form className="footer-form" onSubmit={handleSubmit}>
@@ -115,43 +108,14 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-
-            {/* Socials */}
-            <div className="footer-nav-col">
-              <span className="col-label">Socials</span>
-              <ul className="col-links">
-                {socialLinks.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="footer-link"
-                    >
-                      <RollingText text={link.label} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
 
         {/* Bottom Part */}
         <div className="footer-bottom">
           <div className="footer-bottom-meta">
-            <span className="copyright-text">Copyrights ©2025. All right reserved</span>
-            <div className="designer-credit">
-              <span>Design by </span>
-              <a
-                href="https://x.com/Faris_rzk"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="designer-link"
-              >
-                <RollingText text="Faris" />
-              </a>
-            </div>
+            <span className="copyright-text">Copyright © 2026 NEXODE. All rights reserved.</span>
+            <span className="footer-studio-tag">Digital Design &amp; Product Studio</span>
           </div>
 
           {/* Massive Brand SVG Typography */}
@@ -168,7 +132,7 @@ export default function Footer() {
                 textAnchor="middle"
                 className="svg-brand-text"
               >
-                BOLDCRAFT
+                NEXODE
               </text>
             </svg>
           </div>
@@ -325,14 +289,10 @@ export default function Footer() {
           border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .designer-credit {
-          display: inline-flex;
-          align-items: center;
-          gap: 4px;
-        }
-
-        .designer-link {
-          color: var(--color-dark-text);
+        .footer-studio-tag {
+          font-family: var(--font-geist);
+          font-size: 14px;
+          color: var(--color-dark-muted);
         }
 
         .footer-massive-text {
@@ -349,9 +309,9 @@ export default function Footer() {
 
         .svg-brand-text {
           font-family: var(--font-host);
-          font-size: 260px;
+          font-size: 290px;
           font-weight: 600;
-          letter-spacing: -0.035em;
+          letter-spacing: 0.01em;
           fill: var(--color-dark-text);
         }
 

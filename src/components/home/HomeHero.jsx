@@ -5,23 +5,23 @@ import HeroRippleShader from './HeroRippleShader';
 const CAROUSEL_SLIDES = [
   {
     id: 1,
-    image: "https://framerusercontent.com/images/VmOsBRqr6U3n9xJBBTIFdUXKCk.png?width=736&height=824",
-    title: "Editorial Look 1"
+    image: "/images/hero_slide_saas.jpg",
+    title: "SaaS Mobile App UI"
   },
   {
     id: 2,
-    image: "https://framerusercontent.com/images/Fbpsc1kiS6aiV5okZt7TjBBTFw.png?width=960&height=1200",
-    title: "Editorial Look 2"
+    image: "/images/hero_slide_web.jpg",
+    title: "Editorial Web Platform"
   },
   {
     id: 3,
-    image: "https://framerusercontent.com/images/cxpVqvho7JAQtJxuTsOIPp1lxhE.png?width=686&height=1200",
-    title: "Editorial Look 3"
+    image: "/images/hero_slide_system.jpg",
+    title: "Design System & Tokens"
   },
   {
     id: 4,
-    image: "https://framerusercontent.com/images/FLOdRzEjnCJYFO8eZ3SdbeJdw.png?width=960&height=1200",
-    title: "Editorial Look 4"
+    image: "/images/hero_slide_fintech.jpg",
+    title: "FinTech Analytics Dashboard"
   }
 ];
 
@@ -61,7 +61,7 @@ export default function HomeHero() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1 className="hero-title">
-              DESIGN THAT BUILDS BRANDS &amp; DIGITAL EXPERIENCES
+              ARCHITECTING NEXT-GEN DIGITAL PRODUCTS &amp; EXPERIENCES
             </h1>
           </motion.div>
 
@@ -112,7 +112,7 @@ export default function HomeHero() {
           </motion.div>
         </div>
 
-        {/* Bottom Row: Service Tags & Giant BOLDCRAFT Brand Mark */}
+        {/* Bottom Row: Service Tags & Giant NEXODE Brand Mark */}
         <div className="bottom-container">
           <motion.div
             className="tags-row"
@@ -132,7 +132,7 @@ export default function HomeHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="massive-boldcraft">BOLDCRAFT</div>
+            <div className="massive-nexode">NEXODE</div>
           </motion.div>
         </div>
       </div>
@@ -273,12 +273,12 @@ export default function HomeHero() {
           line-height: 0.82;
         }
 
-        .massive-boldcraft {
+        .massive-nexode {
           font-family: var(--font-host);
-          font-size: clamp(68px, 13.18vw, 190px);
+          font-size: clamp(72px, 14.5vw, 210px);
           font-weight: 700;
           color: #e6e6e6;
-          letter-spacing: -0.03em;
+          letter-spacing: -0.02em;
           text-transform: uppercase;
           width: 100%;
           text-align: justify;
@@ -320,8 +320,8 @@ export default function HomeHero() {
           .hero-tag {
             font-size: 14px;
           }
-          .massive-boldcraft {
-            font-size: clamp(48px, 14vw, 100px);
+          .massive-nexode {
+            font-size: clamp(52px, 15vw, 110px);
           }
         }
       `}</style>

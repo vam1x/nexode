@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import RollingText from '../RollingText';
 
 const FAQ_ITEMS = [
   {
     num: "01",
     question: "How do I start a project?",
-    answer: "Not at all—our course begins with the basics and gradually builds to advanced techniques smoothly."
+    answer: "Simply submit an inquiry via our contact page or book a discovery call. We'll review your project scope, timeline, and goals to provide a tailored proposal within 24 hours."
   },
   {
     num: "02",
@@ -43,7 +44,7 @@ export default function HomeFAQ() {
         {/* Section Header */}
         <div className="faq-header">
           <div className="header-meta">
-            <span className="faq-num">06</span>
+            <span className="faq-num">05</span>
             <span className="faq-label">FAQ</span>
           </div>
           <h2 className="faq-headline">COMMON QUESTIONS ANSWERED</h2>
@@ -62,9 +63,9 @@ export default function HomeFAQ() {
             <p className="callout-desc">
               Not sure about something? Check our FAQ for quick answers and helpful details.
             </p>
-            <a href="#contact" className="callout-btn">
+            <Link to="/contact" className="callout-btn">
               <RollingText text="Book A Call" />
-            </a>
+            </Link>
           </div>
 
           {/* Accordion List */}

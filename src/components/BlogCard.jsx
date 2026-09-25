@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function BlogCard({ blog, index }) {
   return (
@@ -16,8 +17,8 @@ export default function BlogCard({ blog, index }) {
         delay: (index % 2) * 0.12
       }}
     >
-      <a
-        href={blog.href}
+      <Link
+        to={blog.href}
         className="blog-card group"
         aria-label={`${blog.title} - published on ${blog.date}`}
       >
@@ -38,7 +39,7 @@ export default function BlogCard({ blog, index }) {
           </time>
           <h4 className="blog-title">{blog.title}</h4>
         </div>
-      </a>
+      </Link>
 
       <style>{`
         .blog-card-wrapper {

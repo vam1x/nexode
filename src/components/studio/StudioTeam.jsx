@@ -5,37 +5,37 @@ const TEAM_MEMBERS = [
   {
     id: 1,
     name: "James John",
-    role: "Lead UX Designer",
+    role: "Founder & Creative Director",
     image: "https://framerusercontent.com/images/uWtw0H8V4Ms6mVhnU3Qg2Nf5IzE.png?width=928&height=1232"
   },
   {
     id: 2,
-    name: "James John",
-    role: "Lead UX Designer",
+    name: "Elena Vance",
+    role: "Lead Brand Strategist",
     image: "https://framerusercontent.com/images/1lsvPWSJzVPWZsOOLphOtTQ40c.png?width=928&height=1232"
   },
   {
     id: 3,
-    name: "James John",
-    role: "Lead UX Designer",
+    name: "Marcus Reed",
+    role: "Lead UX/UI Designer",
     image: "https://framerusercontent.com/images/UDePoV4zCRKlQEYh1eO9QvZjQ0g.png?width=928&height=1232"
   },
   {
     id: 4,
-    name: "James John",
-    role: "Lead UX Designer",
+    name: "Sophia Chen",
+    role: "Senior Product Designer",
     image: "https://framerusercontent.com/images/ybMp7PpJ1Ej0rnn0VuEviRoP0.png?width=928&height=1232"
   },
   {
     id: 5,
-    name: "James John",
-    role: "Lead UX Designer",
+    name: "Liam Gallagher",
+    role: "Motion & Visual Designer",
     image: "https://framerusercontent.com/images/GEhMHmuEimkp60kSShkrGzwUY.png?width=928&height=1232"
   },
   {
     id: 6,
-    name: "James John",
-    role: "Lead UX Designer",
+    name: "Amara Patel",
+    role: "Design Systems Lead",
     image: "https://framerusercontent.com/images/tUDW39lqxOKJRMdbpRuPHkImsC0.png?width=928&height=1232"
   }
 ];
@@ -48,7 +48,7 @@ export default function StudioTeam() {
         <div className="team-header">
           <div className="header-meta">
             <span className="team-num">04</span>
-            <span className="team-label">team</span>
+            <span className="team-label">TEAM</span>
           </div>
           <h2 className="team-headline">MEET OUR TEAM</h2>
         </div>
