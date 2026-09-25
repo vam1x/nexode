@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import RollingText from './RollingText';
+import NexodeLogo from './NexodeLogo';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -92,7 +93,7 @@ export default function Navbar() {
         {/* Left: Brand Logo */}
         <div className="nav-col-left">
           <Link to="/" className="logo-link" aria-label="NEXODE Home">
-            <span className="logo-text">NEXODE</span>
+            <NexodeLogo size={20} showText={true} />
           </Link>
         </div>
 
@@ -216,6 +217,8 @@ export default function Navbar() {
           display: inline-flex;
           align-items: center;
           text-decoration: none;
+          color: var(--nav-text-color);
+          transition: color 0.3s ease;
         }
 
         .logo-text {

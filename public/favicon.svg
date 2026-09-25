@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Container Background -->
+  <rect width="64" height="64" rx="14" fill="#0A0A0A" />
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.5" />
+
+  <!-- Mathematically Aligned NEXODE Monogram -->
+  <path
+    d="M15 14C15 12.3431 16.3431 11 18 11H22C22.6 11 23.1 11.3 23.4 11.7L40.6 40.5V14C40.6 12.3431 41.9431 11 43.6 11H46C47.6569 11 49 12.3431 49 14V50C49 51.6569 47.6569 53 46 53H42C41.4 53 40.9 52.7 40.6 52.3L23.4 23.5V50C23.4 51.6569 22.0569 53 20.4 53H18C16.3431 53 15 51.6569 15 50V14Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- Center Nexus Core Node -->
+  <circle cx="32" cy="32" r="3.4" fill="#0A0A0A" />
+  <circle cx="32" cy="32" r="1.9" fill="#38BDF8" />
+</svg>

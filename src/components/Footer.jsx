@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import RollingText from './RollingText';
+import NexodeLogo from './NexodeLogo';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -44,7 +45,8 @@ export default function Footer() {
         <div className="footer-upper">
           {/* Left Column: Brand, Tagline, Newsletter */}
           <div className="footer-brand-col">
-            <Link to="/" className="footer-logo">
+            <Link to="/" className="footer-logo" aria-label="NEXODE Home">
+              <NexodeLogo size={22} showText={false} />
               <h4>NEXODE</h4>
             </Link>
             <p className="footer-tagline">
@@ -165,6 +167,14 @@ export default function Footer() {
           width: 100%;
         }
 
+        .footer-logo {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          color: var(--color-dark-text);
+        }
+
         .footer-logo h4 {
           font-family: var(--font-inter);
           font-size: 20px;
@@ -172,6 +182,7 @@ export default function Footer() {
           letter-spacing: -0.01em;
           color: var(--color-dark-text);
           text-transform: uppercase;
+          margin: 0;
         }
 
         .footer-tagline {

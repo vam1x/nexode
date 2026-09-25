@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import RollingText from '../components/RollingText';
+import NexodeLogo from '../components/NexodeLogo';
 
 export default function NotFoundPage() {
   useEffect(() => {
@@ -18,6 +19,9 @@ export default function NotFoundPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
+          <div className="notfound-logo-wrap" style={{ marginBottom: '8px' }}>
+            <NexodeLogo size={36} showText={false} />
+          </div>
           <span className="notfound-badge">ERROR 404</span>
           <h1 className="notfound-code">LOST IN SPACE</h1>
           <p className="notfound-desc">
