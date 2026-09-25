@@ -20,7 +20,7 @@ const BUDGET_OPTIONS = [
 
 export default function ContactPage() {
   useEffect(() => {
-    document.title = "Contact — Bold Craft Studio";
+    document.title = "Contact — NEXODE Studio";
     window.scrollTo(0, 0);
   }, []);
 
@@ -92,8 +92,8 @@ export default function ContactPage() {
           >
             <div className="info-block">
               <span className="info-title">DIRECT INQUIRIES</span>
-              <a href="mailto:hello@boldcraft.com" className="info-email-link">
-                hello@boldcraft.com
+              <a href="mailto:hello@nexode.studio" className="info-email-link">
+                hello@nexode.studio
               </a>
               <p className="info-subtext">
                 We review every inquiry within 24 hours Monday through Friday.

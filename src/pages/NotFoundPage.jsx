@@ -5,7 +5,7 @@ import RollingText from '../components/RollingText';
 
 export default function NotFoundPage() {
   useEffect(() => {
-    document.title = "404 — Page Not Found | Bold Craft";
+    document.title = "404 — Page Not Found | NEXODE";
     window.scrollTo(0, 0);
   }, []);
 

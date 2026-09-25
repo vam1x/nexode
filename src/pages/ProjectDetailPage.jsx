@@ -16,9 +16,9 @@ export default function ProjectDetailPage() {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.title} — Bold Craft Case Study`;
+      document.title = `${project.title} — NEXODE Case Study`;
     } else {
-      document.title = "Project Not Found — Bold Craft";
+      document.title = "Project Not Found — NEXODE";
     }
     window.scrollTo(0, 0);
   }, [project, slug]);

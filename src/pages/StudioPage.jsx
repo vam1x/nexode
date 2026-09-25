@@ -7,7 +7,7 @@ import HomeFAQ from '../components/home/HomeFAQ';
 
 export default function StudioPage() {
   useEffect(() => {
-    document.title = "Studio — Bold Craft";
+    document.title = "Studio — NEXODE";
     window.scrollTo(0, 0);
   }, []);
 

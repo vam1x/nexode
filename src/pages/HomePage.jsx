@@ -9,7 +9,7 @@ import HomeBlog from '../components/home/HomeBlog';
 
 export default function HomePage() {
   useEffect(() => {
-    document.title = "Bold Craft — Digital Design Studio";
+    document.title = "NEXODE — Digital Design & Product Studio";
     window.scrollTo(0, 0);
   }, []);
   return (
