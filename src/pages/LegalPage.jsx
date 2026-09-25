@@ -7,8 +7,8 @@ export default function LegalPage({ type = "privacy" }) {
 
   useEffect(() => {
     document.title = isPrivacy
-      ? "Privacy Policy — Bold Craft"
-      : "Terms of Service — Bold Craft";
+      ? "Privacy Policy — NEXODE"
+      : "Terms of Service — NEXODE";
     window.scrollTo(0, 0);
   }, [isPrivacy]);
 
@@ -51,7 +51,7 @@ export default function LegalPage({ type = "privacy" }) {
               <section className="policy-block">
                 <h2>1. Information We Collect</h2>
                 <p>
-                  At Bold Craft Studio, we prioritize your privacy and transparency. We only collect personal information that you voluntarily submit through our project inquiry forms, direct email correspondence, or newsletter subscriptions. This may include your name, work email address, company details, and project specifications.
+                  At NEXODE Studio, we prioritize your privacy and transparency. We only collect personal information that you voluntarily submit through our project inquiry forms, direct email correspondence, or newsletter subscriptions. This may include your name, work email address, company details, and project specifications.
                 </p>
               </section>
 
@@ -80,7 +80,7 @@ export default function LegalPage({ type = "privacy" }) {
                 <h2>5. Contact Concerning Privacy</h2>
                 <p>
                   If you have any questions or wish to request data deletion, please contact our data team directly at{' '}
-                  <a href="mailto:privacy@boldcraft.com" className="legal-link">privacy@boldcraft.com</a>.
+                  <a href="mailto:privacy@nexode.studio" className="legal-link">privacy@nexode.studio</a>.
                 </p>
               </section>
             </div>
@@ -89,14 +89,14 @@ export default function LegalPage({ type = "privacy" }) {
               <section className="policy-block">
                 <h2>1. Agreement to Terms</h2>
                 <p>
-                  By accessing the Bold Craft website or engaging our creative design services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, please refrain from using our digital properties.
+                  By accessing the NEXODE website or engaging our creative design services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, please refrain from using our digital properties.
                 </p>
               </section>
 
               <section className="policy-block">
                 <h2>2. Intellectual Property Rights</h2>
                 <p>
-                  All case studies, conceptual brand systems, interactive code shaders, typography selections, and visual media displayed on this website are the proprietary property of Bold Craft or our respective clients and are protected by international intellectual property laws.
+                  All case studies, conceptual brand systems, interactive code shaders, typography selections, and visual media displayed on this website are the proprietary property of NEXODE or our respective clients and are protected by international intellectual property laws.
                 </p>
               </section>
 
@@ -110,7 +110,7 @@ export default function LegalPage({ type = "privacy" }) {
               <section className="policy-block">
                 <h2>4. Limitation of Liability</h2>
                 <p>
-                  This website and all creative concepts are provided on an "as is" basis without warranties of any kind. Bold Craft is not liable for indirect or consequential damages arising from site access or reliance on published content.
+                  This website and all creative concepts are provided on an "as is" basis without warranties of any kind. NEXODE is not liable for indirect or consequential damages arising from site access or reliance on published content.
                 </p>
               </section>
 

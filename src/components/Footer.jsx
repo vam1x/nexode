@@ -45,10 +45,10 @@ export default function Footer() {
           {/* Left Column: Brand, Tagline, Newsletter */}
           <div className="footer-brand-col">
             <Link to="/" className="footer-logo">
-              <h4>BOLDCRAFT</h4>
+              <h4>NEXODE</h4>
             </Link>
             <p className="footer-tagline">
-              Design That Builds Brands &amp; Digital Experiences
+              Next-Gen Digital Products &amp; Bespoke Web Experiences
             </p>
 
             <form className="footer-form" onSubmit={handleSubmit}>
@@ -114,7 +114,7 @@ export default function Footer() {
         {/* Bottom Part */}
         <div className="footer-bottom">
           <div className="footer-bottom-meta">
-            <span className="copyright-text">Copyright © 2026 BOLDCRAFT. All rights reserved.</span>
+            <span className="copyright-text">Copyright © 2026 NEXODE. All rights reserved.</span>
             <span className="footer-studio-tag">Digital Design &amp; Product Studio</span>
           </div>
 
@@ -132,7 +132,7 @@ export default function Footer() {
                 textAnchor="middle"
                 className="svg-brand-text"
               >
-                BOLDCRAFT
+                NEXODE
               </text>
             </svg>
           </div>
@@ -309,9 +309,9 @@ export default function Footer() {
 
         .svg-brand-text {
           font-family: var(--font-host);
-          font-size: 260px;
+          font-size: 290px;
           font-weight: 600;
-          letter-spacing: -0.035em;
+          letter-spacing: 0.01em;
           fill: var(--color-dark-text);
         }
 

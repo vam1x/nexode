@@ -12,9 +12,9 @@ export default function BlogDetailPage() {
 
   useEffect(() => {
     if (blog) {
-      document.title = `${blog.title} — Bold Craft Insights`;
+      document.title = `${blog.title} — NEXODE Insights`;
     } else {
-      document.title = "Article Not Found — Bold Craft";
+      document.title = "Article Not Found — NEXODE";
     }
     window.scrollTo(0, 0);
   }, [blog, slug]);

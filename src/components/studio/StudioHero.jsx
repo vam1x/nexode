@@ -23,7 +23,7 @@ export default function StudioHero() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
           <h1 className="hero-title">
-            WHERE IDEAS TAKE SHAPE
+            ENGINEERING THE NEXT ERA OF DIGITAL CRAFT
           </h1>
         </motion.div>
       </div>

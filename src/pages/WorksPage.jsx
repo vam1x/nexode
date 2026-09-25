@@ -4,7 +4,7 @@ import WorksGrid from '../components/WorksGrid';
 
 export default function WorksPage() {
   useEffect(() => {
-    document.title = "Works — Bold Craft";
+    document.title = "Works — NEXODE";
     window.scrollTo(0, 0);
   }, []);
 
