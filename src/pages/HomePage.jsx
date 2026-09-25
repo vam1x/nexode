@@ -3,14 +3,13 @@ import HomeHero from '../components/home/HomeHero';
 import WhoWeAre from '../components/home/WhoWeAre';
 import HomeWorks from '../components/home/HomeWorks';
 import HomeServices from '../components/home/HomeServices';
-import HomePricing from '../components/home/HomePricing';
 import HomeTestimonial from '../components/home/HomeTestimonial';
 import HomeFAQ from '../components/home/HomeFAQ';
 import HomeBlog from '../components/home/HomeBlog';
 
 export default function HomePage() {
   useEffect(() => {
-    document.title = "Bold Craft";
+    document.title = "Bold Craft — Digital Design Studio";
     window.scrollTo(0, 0);
   }, []);
   return (
@@ -19,7 +18,6 @@ export default function HomePage() {
       <WhoWeAre />
       <HomeWorks />
       <HomeServices />
-      <HomePricing />
       <HomeTestimonial />
       <HomeFAQ />
       <HomeBlog />

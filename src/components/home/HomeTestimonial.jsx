@@ -8,7 +8,7 @@ export default function HomeTestimonial() {
         {/* Section Header */}
         <div className="testimonial-header">
           <div className="header-meta">
-            <span className="testimonial-num">05</span>
+            <span className="testimonial-num">04</span>
             <span className="testimonial-label">Testimonials</span>
           </div>
           <h2 className="testimonial-headline">
@@ -44,11 +44,11 @@ export default function HomeTestimonial() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
             <blockquote className="quote-text">
-              “They transformed our website into a high-performing platform. Clean design and great communication throughout”
+              “They transformed our website into a high-performing platform. Clean design and great communication throughout.”
             </blockquote>
             <div className="author-meta">
               <h3 className="author-name">Kayle John</h3>
-              <p className="author-role">CEO,AUTM Clothings</p>
+              <p className="author-role">CEO, AUTM Clothings</p>
             </div>
           </motion.div>
         </div>

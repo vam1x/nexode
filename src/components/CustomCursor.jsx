@@ -36,12 +36,15 @@ export default function CustomCursor() {
       setIsHovered(!!target);
     };
 
+    document.body.classList.add('has-custom-cursor');
+
     window.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mouseenter', handleMouseEnter);
     document.addEventListener('mouseover', handleElementHover);
 
     return () => {
+      document.body.classList.remove('has-custom-cursor');
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseenter', handleMouseEnter);

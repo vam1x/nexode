@@ -76,7 +76,7 @@ export default function WhoWeAre() {
         {/* Upper container: Label & Scroll reveal text on Left, Stats on Right */}
         <div className="upper-container">
           <div ref={textContainerRef} className="text-col">
-            <span className="section-label">Who We are</span>
+            <span className="section-label">Who We Are</span>
             <p className="statement-paragraph">
               {words.map((word, wIdx) => {
                 const chars = word.split("");
@@ -128,7 +128,7 @@ export default function WhoWeAre() {
           </motion.div>
         </div>
 
-        {/* Bottom container: 3 Editorial Images */}
+        {/* Bottom container: 3 Design Studio Workflow Images */}
         <div className="images-container">
           <motion.div
             className="img-card card-1"
@@ -138,8 +138,8 @@ export default function WhoWeAre() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <img
-              src="https://framerusercontent.com/images/ckNnEn0gZDJD3KlQ5pew1wY0f0I.png?width=904&height=1200"
-              alt="Studio showcase 1"
+              src="/images/studio_figma_workspace.jpg"
+              alt="UI UX design sprint and Figma component architecture"
               className="editorial-img"
               loading="lazy"
             />
@@ -153,8 +153,8 @@ export default function WhoWeAre() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
             <img
-              src="https://framerusercontent.com/images/w6Se4jlxX1STTQ0PAxketKvJtY.png?width=904&height=1200"
-              alt="Studio showcase 2"
+              src="/images/studio_mobile_proto.jpg"
+              alt="Interactive mobile app prototype testing"
               className="editorial-img"
               loading="lazy"
             />
@@ -168,8 +168,8 @@ export default function WhoWeAre() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <img
-              src="https://framerusercontent.com/images/cFTAO2s1PC0t8c5H6FIPby6o8.jpg?width=1058&height=1182"
-              alt="Studio showcase 3"
+              src="/images/studio_design_review.jpg"
+              alt="Digital product architecture and design system review"
               className="editorial-img"
               loading="lazy"
             />
