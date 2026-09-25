@@ -20,7 +20,10 @@ export default function Navbar() {
   const allLinks = [...centerLinks, contactLink];
 
   const isLinkActive = (href) => {
-    return location.pathname === href;
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname === href || location.pathname.startsWith(`${href}/`);
   };
 
   // Close mobile menu on route change
@@ -88,8 +91,8 @@ export default function Navbar() {
       <div className="header-inner">
         {/* Left: Brand Logo */}
         <div className="nav-col-left">
-          <Link to="/" className="logo-link" aria-label="Boldcraft Home">
-            <span className="logo-text">BOLDCRAFT</span>
+          <Link to="/" className="logo-link" aria-label="NEXODE Home">
+            <span className="logo-text">NEXODE</span>
           </Link>
         </div>
 

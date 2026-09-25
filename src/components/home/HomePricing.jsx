@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import RollingText from '../RollingText';
 
 export default function HomePricing() {
@@ -57,9 +58,9 @@ export default function HomePricing() {
                 <span className="price-amount">$2K</span>
                 <span className="price-period">/Month</span>
               </div>
-              <a href="#contact" className="pricing-btn light-btn">
+              <Link to="/contact" className="pricing-btn light-btn">
                 <RollingText text="Start Monthly Plan" />
-              </a>
+              </Link>
             </div>
 
             <div className="card-features">
@@ -92,9 +93,9 @@ export default function HomePricing() {
                 <span className="price-amount">$5K</span>
                 <span className="price-period">From</span>
               </div>
-              <a href="#contact" className="pricing-btn dark-btn">
-                <RollingText text="Start Monthly Plan" />
-              </a>
+              <Link to="/contact" className="pricing-btn dark-btn">
+                <RollingText text="Start Custom Project" />
+              </Link>
             </div>
 
             <div className="card-features">
