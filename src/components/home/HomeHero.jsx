@@ -5,23 +5,23 @@ import HeroRippleShader from './HeroRippleShader';
 const CAROUSEL_SLIDES = [
   {
     id: 1,
-    image: "https://framerusercontent.com/images/VmOsBRqr6U3n9xJBBTIFdUXKCk.png?width=736&height=824",
-    title: "Editorial Look 1"
+    image: "/images/hero_slide_saas.jpg",
+    title: "SaaS Mobile App UI"
   },
   {
     id: 2,
-    image: "https://framerusercontent.com/images/Fbpsc1kiS6aiV5okZt7TjBBTFw.png?width=960&height=1200",
-    title: "Editorial Look 2"
+    image: "/images/hero_slide_web.jpg",
+    title: "Editorial Web Platform"
   },
   {
     id: 3,
-    image: "https://framerusercontent.com/images/cxpVqvho7JAQtJxuTsOIPp1lxhE.png?width=686&height=1200",
-    title: "Editorial Look 3"
+    image: "/images/hero_slide_system.jpg",
+    title: "Design System & Tokens"
   },
   {
     id: 4,
-    image: "https://framerusercontent.com/images/FLOdRzEjnCJYFO8eZ3SdbeJdw.png?width=960&height=1200",
-    title: "Editorial Look 4"
+    image: "/images/hero_slide_fintech.jpg",
+    title: "FinTech Analytics Dashboard"
   }
 ];
 

@@ -7,7 +7,7 @@ const FEATURED_PROJECTS = [
     id: 'noila',
     title: 'NOILA',
     year: '2026',
-    image: 'https://framerusercontent.com/images/eEFTAnov0CKyA6QktsWeM4jPdv4.jpg?width=4800&height=3200',
+    image: '/images/noila_showcase.jpg',
     align: 'flex-start',
     width: '552px',
     height: '644px'
@@ -16,7 +16,7 @@ const FEATURED_PROJECTS = [
     id: 'cosmira',
     title: 'COSMIRA',
     year: '2026',
-    image: 'https://framerusercontent.com/images/8twa8QVRhthsLkemsnyPSG0xfX4.png?width=904&height=1200',
+    image: '/images/cosmira_showcase.jpg',
     align: 'flex-end',
     width: '580px',
     height: '675px'
@@ -25,7 +25,7 @@ const FEATURED_PROJECTS = [
     id: 'astra',
     title: 'ASTRA',
     year: '2026',
-    image: 'https://framerusercontent.com/images/00aunXB2T7uPNtlhXQ60jYhP9Y.webp?width=4800&height=4800',
+    image: '/images/astra_showcase.jpg',
     align: 'flex-start',
     width: '470px',
     height: '554px'
@@ -34,7 +34,7 @@ const FEATURED_PROJECTS = [
     id: 'auresto',
     title: 'AURESTO',
     year: '2026',
-    image: 'https://framerusercontent.com/images/w6Se4jlxX1STTQ0PAxketKvJtY.png?width=904&height=1200',
+    image: '/images/auresto_showcase.jpg',
     align: 'center',
     width: '552px',
     height: '644px'
@@ -43,7 +43,7 @@ const FEATURED_PROJECTS = [
     id: 'samuer',
     title: 'SAMUER',
     year: '2026',
-    image: 'https://framerusercontent.com/images/sqix9bpI8zgZj4Z7fz9nl2N4js.png?width=1200&height=655',
+    image: '/images/samuer_showcase.jpg',
     align: 'flex-end',
     width: '510px',
     height: '599px'
@@ -58,7 +58,7 @@ export default function HomeWorks() {
         <div className="works-header">
           <div className="header-meta">
             <span className="section-number">02</span>
-            <span className="section-title-label">Seleceted Projects</span>
+            <span className="section-title-label">Selected Projects</span>
           </div>
           <p className="header-description">
             Explore a selection of websites, brands, and digital products we've crafted for growing businesses.
@@ -88,7 +88,7 @@ export default function HomeWorks() {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <Link to="/works" className="project-link" aria-label={`View ${project.title}`}>
+                  <Link to={`/works/${project.id}`} className="project-link" aria-label={`View ${project.title} case study`}>
                     <div className="project-img-wrap" style={{ height: project.height }}>
                       <img
                         src={project.image}

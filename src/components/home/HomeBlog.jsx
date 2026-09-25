@@ -30,8 +30,8 @@ export default function HomeBlog() {
         {/* Section Header */}
         <div className="blog-header">
           <div className="header-meta">
-            <span className="blog-num">07</span>
-            <span className="blog-label">blog</span>
+            <span className="blog-num">06</span>
+            <span className="blog-label">BLOG</span>
           </div>
           <h2 className="blog-headline">
             INSIGHTS, IDEAS &amp; DESIGN INSPIRATION
@@ -52,7 +52,7 @@ export default function HomeBlog() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Link to="/blogs" className="blog-card-link">
+              <Link to={`/blogs/${post.id}`} className="blog-card-link">
                 <div className="blog-img-container">
                   <img
                     src={post.image}

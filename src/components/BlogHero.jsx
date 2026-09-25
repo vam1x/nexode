@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function BlogHero() {
-  const letters = "Blogs".split("");
+  const words = ["OUR", "BLOGS"];
 
   const letterVariants = {
     hidden: { opacity: 0, y: 32 },
@@ -14,26 +14,36 @@ export default function BlogHero() {
         stiffness: 200,
         damping: 80,
         mass: 1,
-        delay: 0.15 + i * 0.04
+        delay: 0.15 + i * 0.035
       }
     })
   };
 
+  let globalCharIndex = 0;
+
   return (
     <section className="blog-hero-section">
       <div className="blog-hero-container container">
-        <h1 className="blog-hero-title" aria-label="Blogs">
-          {letters.map((char, index) => (
-            <motion.span
-              key={index}
-              className="blog-hero-char"
-              custom={index}
-              initial="hidden"
-              animate="visible"
-              variants={letterVariants}
-            >
-              {char}
-            </motion.span>
+        <h1 className="blog-hero-title" aria-label="Our Blogs">
+          {words.map((word, wordIdx) => (
+            <span key={wordIdx} className="blog-word">
+              {word.split("").map((char) => {
+                const charIndex = globalCharIndex++;
+                return (
+                  <motion.span
+                    key={charIndex}
+                    className="blog-hero-char"
+                    custom={charIndex}
+                    initial="hidden"
+                    animate="visible"
+                    variants={letterVariants}
+                  >
+                    {char}
+                  </motion.span>
+                );
+              })}
+              {wordIdx < words.length - 1 && <span className="blog-space">&nbsp;</span>}
+            </span>
           ))}
         </h1>
 
@@ -45,10 +55,10 @@ export default function BlogHero() {
             type: "spring",
             stiffness: 200,
             damping: 80,
-            delay: 0.4
+            delay: 0.45
           }}
         >
-          Explore a selection of websites, brands, and digital products we've crafted for growing businesses.
+          Explore practical insights, strategic frameworks, and creative perspectives from our multidisciplinary design team.
         </motion.p>
       </div>
 
@@ -76,7 +86,12 @@ export default function BlogHero() {
           color: var(--color-text);
           display: flex;
           justify-content: center;
+          flex-wrap: wrap;
           margin-bottom: 16px;
+        }
+
+        .blog-word {
+          display: inline-flex;
         }
 
         .blog-hero-char {
@@ -90,7 +105,7 @@ export default function BlogHero() {
           font-weight: 400;
           line-height: 1.4;
           color: var(--color-text-muted);
-          max-width: 400px;
+          max-width: 480px;
           margin: 0 auto;
         }
 

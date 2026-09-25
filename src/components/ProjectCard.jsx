@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function ProjectCard({ project, index }) {
   return (
@@ -16,8 +17,8 @@ export default function ProjectCard({ project, index }) {
         delay: (index % 2) * 0.12
       }}
     >
-      <a
-        href={project.href}
+      <Link
+        to={project.href}
         className="project-card group"
         aria-label={`${project.title} case study - ${project.year}`}
       >
@@ -36,7 +37,7 @@ export default function ProjectCard({ project, index }) {
           <h4 className="card-title">{project.title}</h4>
           <h4 className="card-year">{project.year}</h4>
         </div>
-      </a>
+      </Link>
 
       <style>{`
         .project-card-wrapper {

@@ -20,7 +20,10 @@ export default function Navbar() {
   const allLinks = [...centerLinks, contactLink];
 
   const isLinkActive = (href) => {
-    return location.pathname === href;
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname === href || location.pathname.startsWith(`${href}/`);
   };
 
   // Close mobile menu on route change
